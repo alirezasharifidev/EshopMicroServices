@@ -15,7 +15,7 @@ IQueryHandler<GetProductByIdQuery, GetProductByIdResult>
 
         if (product == null)
         {
-            throw new ProductNotFoundException();//TDODO: Exception handling
+            throw new ProductNotFoundException(query.Id);//TDODO: Exception handling
         }
 
         return new GetProductByIdResult(product);
